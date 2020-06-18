@@ -139,10 +139,11 @@ class Login extends Component {
                                     <ModalBox id="success" handlerIsLoggedIn={this.props.handlerIsLoggedIn}>
                                         <h2>Welcome {this.state.username}! You have successfully logged In !</h2>
 
-                                        <button onClick={ModalBox.close('success')}>Close</button>
+                                        <Button onClick={ModalBox.close('success')}>Close</Button>
                                     </ModalBox>
 
                                     <ModalBox id="register" handleRegister={this.props.handleRegister}>
+                                    <Button onClick={ModalBox.close('register')}>Close</Button>
                                         <Register></Register>
                                         {/* <Form
                                             // value={value}
@@ -158,7 +159,7 @@ class Login extends Component {
                                             </FormField>
                                             <Button type="submit" label="Update" />
                                         </Form> */}
-                                        <button onClick={ModalBox.close('register')}>Close</button>
+                                        
                                     </ModalBox>
                                 </Box>
                                 <Box align="center" justify="center" border={{ "color": "grey", "size": "small", "side": "all" }} margin={{ "top": "medium" }}>
