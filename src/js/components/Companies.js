@@ -132,7 +132,7 @@ class Companies extends Component{
   render(){
     const { companies }=this.props;
     return(
-    <Box align='center' pad='large' background="blue">
+    <Box align='center' pad='large' background="grey">
       <DataTable columns={columns} data={companies} />
     </Box>    
     );

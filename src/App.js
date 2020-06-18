@@ -49,7 +49,7 @@ const theme = {
 
 var sectionStyle = {
   // width: "inherit",
-  height: "97vh",
+  // height: "97vh",
   backgroundImage: `url(${logo})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center center',

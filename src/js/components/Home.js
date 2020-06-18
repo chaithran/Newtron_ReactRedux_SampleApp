@@ -7,9 +7,10 @@ import SupplierPage from './SupplierPage';
 import Contact from './Contact';
 import About from './About';
 import Companies from './Companies';
+import Reports from './Reports'
 import { setMainPageFunc, toggleIsLoggedIn } from '../actions';
 import { connect } from 'react-redux';
-import { HOME_MAINPAGE, SUPPLIER_MAINPAGE, CONTACTS_MAINPAGE, ABOUT_MAINPAGE, COMPANIES_MAINPAGE } from "../constants/action-types";
+import { HOME_MAINPAGE, SUPPLIER_MAINPAGE, CONTACTS_MAINPAGE, ABOUT_MAINPAGE, COMPANIES_MAINPAGE, REPORTS_MAINPAGE } from "../constants/action-types";
 
 
 const mapStateToProps = state => {
@@ -44,7 +45,7 @@ class Home extends Component {
     const { suppliers, isLoggedIn, currentUser, setMainPage, toggleIsLoggedIn, setMainPageFunc } = this.props;
     console.log(isLoggedIn + "    isLoggedIn " + setMainPage);
     return (
-      <Box fill background="white">
+      <Box background="white">
         <Grid
           fill
           rows={["auto", "flex"]}
@@ -56,7 +57,7 @@ class Home extends Component {
             { name: "main", start: [1, 1], end: [1, 1] }
           ]}
         >
-          <Box gridArea="header" background="black" round="xsmall">
+          <Box gridArea="header" background="black" border="solid" round="xsmall">
             <Header
               handlersetMainPage={this.handlersetMainPage.bind(this)}
               handlerToggleIsLoggedIn={this.handlerToggleIsLoggedIn.bind(this)}>
@@ -71,6 +72,7 @@ class Home extends Component {
             {setMainPage == CONTACTS_MAINPAGE && <Contact></Contact>}
             {setMainPage == ABOUT_MAINPAGE && <About></About>}
             {setMainPage == COMPANIES_MAINPAGE && <Companies></Companies>}
+            {setMainPage == REPORTS_MAINPAGE && <Reports></Reports>}
           </Box>
         </Grid>
       </Box>

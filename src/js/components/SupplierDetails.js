@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import { Button, Heading,Box,Body } from 'grommet'
+import React, { Component } from 'react';
+import { Button, Heading, Box, Body } from 'grommet'
 // import Panel from 'react-bootstrap/lib/Panel'
 import axios from 'axios'
 
@@ -28,9 +28,9 @@ export default class SupplierDetails extends Component {
 
   //Function to Load the customerdetails data from json.
   getSupplierDetails(id) {
-    axios.get("assets/supplier"+id+".json").then(response => {
-      console.log("res "+response);
-      this.setState({supplierDetails: response})
+    axios.get("assets/supplier" + id + ".json").then(response => {
+      console.log("res " + response);
+      this.setState({ supplierDetails: response })
     })
   };
 
@@ -42,16 +42,17 @@ export default class SupplierDetails extends Component {
         {/* <Heading>
           <Heading.Title componentClass="h3">{this.state.supplierDetails.data.name}</Heading.Title>
         </Heading> */}
-        <Box background="grey"><div>
-          <p>Name : {this.state.supplierDetails.data.name}</p>
-          <p>Email : {this.state.supplierDetails.data.email}</p>
-          <p>Phone : {this.state.supplierDetails.data.phone}</p>
-          <p>City : {this.state.supplierDetails.data.city}</p>
-          <p>State : {this.state.supplierDetails.data.state}</p>
-          <p>Country : {this.state.supplierDetails.data.country}</p>
-          <p>Organization : {this.state.supplierDetails.data.organization}</p>
-          <p>Job Profile : {this.state.supplierDetails.data.jobProfile}</p>
-          <p>Additional Info : {this.state.supplierDetails.data.additionalInfo}</p>
+        <Box margin={{"top":"xsmall"}} width="66vw" round="small" elevation="small" pad="small" background="white">
+          <div>
+            <p>Name : {this.state.supplierDetails.data.name}</p>
+            <p>Email : {this.state.supplierDetails.data.email}</p>
+            <p>Phone : {this.state.supplierDetails.data.phone}</p>
+            <p>City : {this.state.supplierDetails.data.city}</p>
+            <p>State : {this.state.supplierDetails.data.state}</p>
+            <p>Country : {this.state.supplierDetails.data.country}</p>
+            <p>Organization : {this.state.supplierDetails.data.organization}</p>
+            <p>Job Profile : {this.state.supplierDetails.data.jobProfile}</p>
+            <p>Additional Info : {this.state.supplierDetails.data.additionalInfo}</p>
           </div>
         </Box>
       </Box>
