@@ -34,7 +34,7 @@ class Header extends Component {
                 </Box>
 
                 <Box gp="small" justify="center">
-                    <Box gap="xsmall" height="8vh" direction="row" >
+                    <Box gap="xsmall" height="10vh" direction="row" >
                     <Button style={{ width:"9vw", border: "2px solid #223E4F", "border-radius": "10px" }} label={<Text weight="bold">Contact</Text>} name="Contact" icon={<Contact />} onClick={this.handleClick_Contact} />
                     <Button style={{ width:"9vw", border: "2px solid #223E4F", "border-radius": "10px" }} label={<Text weight="bold">About</Text>} value="About" icon={<Article />} onClick={this.handleClick_About} />
                     <Menu style={{ border: "2px solid #223E4F", "border-radius": "10px" }}

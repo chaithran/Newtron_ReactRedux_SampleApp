@@ -57,7 +57,7 @@ class Home extends Component {
             { name: "main", start: [1, 1], end: [1, 1] }
           ]}
         >
-          <Box gridArea="header" background="black" border="solid" round="xsmall" margin={{"left":"xxsmall","right":"xxsmall","top":"xxsmall"}}>
+          <Box gridArea="header" background="black" border="grey" round="xsmall" margin={{"left":"xxsmall","right":"xxsmall","top":"xxsmall"}}>
             <Header
               handlersetMainPage={this.handlersetMainPage.bind(this)}
               handlerToggleIsLoggedIn={this.handlerToggleIsLoggedIn.bind(this)}>
