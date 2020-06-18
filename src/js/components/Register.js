@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grommet, Form, FormField, TextInput, CheckBox, Paragraph, Button } from 'grommet'
+import { Grommet, Form, FormField, TextInput,Box,Text, CheckBox, Paragraph, Button } from 'grommet'
 import { FormEdit, Mail, Lock, UserAdd } from 'grommet-icons'
 import { ModalBox } from './ModalBox';
 
@@ -83,6 +83,9 @@ class Register extends Component {
     render() {
         const { errors } = this.state;
         return (
+            <> <Box alig="center" justify="center" margin="small" pad="medium" background="accent-1" color="white">
+            <Text size="medium"><strong>Register new User</strong></Text>
+        </Box>
             <Form >
                 <FormField label="First Name" color="accent-1" name="firstname">
                     <TextInput placeholder="Enter your name" name="firstname" required onChange={this.handleChange} size="medium" type="text" icon={<FormEdit />} />
@@ -123,11 +126,14 @@ class Register extends Component {
                 <div onClick={ModalBox.close("register")} ref={input => this.inputElementReg = input}></div>
                 <div onClick={ModalBox.open("success_reg")} ref={input => this.inputElementNew = input}></div>
                 <ModalBox id="success_reg">
-                    <Button onClick={ModalBox.close('success_reg')}>Close</Button>
-                    <h2>Hi ! User Registered successfully !</h2>
+                    {/* <Button onClick={ModalBox.close('success_reg')}>Close</Button> */}
+                    <Box alignItems="center" width="medium" pad="medium" height="25vh" overflow="auto" background="accent-1" color="black">
+               
+                    <h2>Hi ! User Registered successfully</h2></Box>
 
                 </ModalBox>
             </Form>
+            </>
         )
     }
 }

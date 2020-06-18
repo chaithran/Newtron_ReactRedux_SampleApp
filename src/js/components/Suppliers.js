@@ -4,17 +4,18 @@ import SupplierDetails from './SupplierDetails'
 import axios from 'axios'
 import '../../App.css';
 import { connect } from 'react-redux';
-import { setSelectedSupplier } from '../actions';
+import { setSelectedSupplier,getData } from '../actions';
 
 const mapStateToProps = state => {
     return {
-        selectedSupplier: state.selectedSupplier
+        selectedSupplier: state.selectedSupplier,
+        suppliers:state.suppliers
     };
 };
 function mapDispatchToProps(dispatch) {
     return {
-        setSelectedSupplier: (id) => dispatch(setSelectedSupplier(id))
-        
+        setSelectedSupplier: (id) => dispatch(setSelectedSupplier(id)),
+        getData:()=>dispatch(getData())
     };
 }
 
@@ -30,11 +31,12 @@ class Suppliers extends Component {
 
     componentDidMount() {
         this.getSupplierData();
+        this.props.getData();
     }
 
     getSupplierData() {
         axios.get('assets/supplierlist.json').then(response => {
-            this.setState({ supplierList: response.data })
+            // this.setState({ supplierList: response.data })
         })
     };
     handlerSetSelectedSupplier=(event)=> {
@@ -43,15 +45,15 @@ class Suppliers extends Component {
         this.props.setSelectedSupplier(id);
     }
     render() {
-        const { selectedSupplier, setSelectedSupplier } = this.props;
-        if (!this.state.supplierList)
+        const { selectedSupplier, setSelectedSupplier ,suppliers} = this.props;
+        if (!suppliers)
             return (<div>Loading data</div>);
 
         return (
             <Box>
                 <div >
                     {
-                        this.state.supplierList.map(supplier =>
+                        suppliers.map(supplier =>
                             <Box background="accent-4" round="medium" align="center" justify="center" pad="xsmall" margin="xsmall">
                                 <Box pad="medium" margin="xsmall" background={{ "dark": false, "color": "light-2", "image": "url('https://avatars0.githubusercontent.com/u/1753301?s=460&v=4\n')" }} round="full" />
                                 <Heading level="4" size="medium" margin="xsmall" textAlign="center">

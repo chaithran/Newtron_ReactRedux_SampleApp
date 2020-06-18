@@ -49,7 +49,7 @@
   margin-bottom: 15px;
 }
 .modal{
-  background: antiquewhite;
+  background: "dimgrey";
   position: absolute;
   /* text-align: center; */
   top: 50%;
@@ -71,9 +71,9 @@
   /* overflow: auto;  */
 }
 .modal-body {
-  padding: 20px;
+  /* padding: 20px; */
   background:"red";
-  margin: 40px;
+  /* margin: 40px; */
 }
 
 .modal-background {

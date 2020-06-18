@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Grommet, Main, Text, TextInput, Button, Box, FormField, TextArea } from 'grommet'
-import { FormEdit, Login as LoginIcon, UserAdd } from 'grommet-icons'
+import { FormEdit, Login as LoginIcon, UserAdd,Validate } from 'grommet-icons'
 import logo from '../../../src/logo.svg';
 import { Form } from 'react-bootstrap'
 import '../../App.css';
@@ -95,28 +95,28 @@ class Login extends Component {
                     <Form onSubmit={this.handleSubmit}>
                         <Box gap="small">
                             <Text  size="medium" weight="bold"> User name </Text>
-                            <TextInput round="small" value={this.state.username} icon={<FormEdit />} placeholder="Enter user name" background="white" name="username" onChange={this.handleChange} />
+                            <TextInput round="small" required value={this.state.username} icon={<FormEdit />} placeholder="Enter user name" background="white" name="username" onChange={this.handleChange} />
                             {errors.username.length > 0 && <span className='error'>{errors.username}</span>}
 
                             <Text size="medium" weight="bold" > Password </Text>
-                            <TextInput round="small" type="password" value={this.state.password} icon={<FormEdit />} placeholder="Enter Password" background="white" name="password" onChange={this.handleChange} />
+                            <TextInput round="small" required type="password" value={this.state.password} icon={<FormEdit />} placeholder="Enter Password" background="white" name="password" onChange={this.handleChange} />
                             {errors.password.length > 0 && <span className='error'>{errors.password}</span>}
                         </Box>
                         <Box style={{ alignItems: "center" }}>
-                            <Button path={Home} type="submit" label="Login" align="center" background="blue"
+                            <Button path={Home} type="submit" label="Login" align="center" background="accent-1"
                                 icon={<LoginIcon color="white" />} margin={{ top: "small" }} />
                             <div onClick={ModalBox.open("success")} ref={input => this.inputElement = input}></div>
                             <ModalBox id="success" handlerIsLoggedIn={this.props.handlerIsLoggedIn}>
-                                <h2>Welcome {this.state.username}! You have successfully logged In !</h2>
-
-                                <button onClick={ModalBox.close('success')}>Close</button>
+                            <Box align="center" width="medium" height="25vh" background="accent-1" color="black !important">
+                                <h2><Validate/> Welcome {this.state.username}!</h2><h4>You have logged In successfully.</h4> </Box>
+                                {/* <button onClick={ModalBox.close('success')}>Close</button> */}
                             </ModalBox>
 
                             <ModalBox id="register" handleRegister={this.props.handleRegister}>
-                                <Box alignItems="center" width="medium" height="85vh" overflow="auto" background="black">
+                                <Box align="center" width="medium" pad="medium" height="85vh" round="medium" overflow="auto" background="black">
                                     <Register></Register>
                                 </Box>
-                                <button onClick={ModalBox.close('register')}>Close</button>
+                                {/* <button onClick={ModalBox.close('register')}>Close</button> */}
                             </ModalBox>
                         </Box>
                         <Box align="center" justify="center" margin={{ "top": "small" }}>

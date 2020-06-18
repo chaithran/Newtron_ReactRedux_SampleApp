@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Grommet, Box, Image, Button, Menu, Text } from 'grommet'
-import { Login, User, Contact, Logout, Apps, Article } from 'grommet-icons';
+import { Grommet, Box, Image, Button, Menu, Text, Stack, Text ,Grid } from 'grommet'
+import { Login, User, Contact, Logout, Apps, Article, Achievement, Logout, Notification } from 'grommet-icons';
 import { CONTACTS_MAINPAGE, ABOUT_MAINPAGE } from "../constants/action-types";
-
+import logo from '../../img/b4.jpg'
 class Header extends Component {
     constructor(props) {
         super(props);

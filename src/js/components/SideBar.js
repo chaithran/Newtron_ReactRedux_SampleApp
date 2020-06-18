@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Box, Button, Header, Menu, Text, Anchor, Footer, Sidebar } from 'grommet';
-import Suppliers from './Suppliers';
 import { User, Group, Organization } from 'grommet-icons';
+import { Box, Button, Header, Menu, Anchor, Footer, Text, Sidebar } from 'grommet';
+import Suppliers from './Suppliers';
 import { SUPPLIER_MAINPAGE, COMPANIES_MAINPAGE } from "../constants/action-types";
 
 class SideBar extends Component {

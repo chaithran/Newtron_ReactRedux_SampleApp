@@ -3,8 +3,7 @@ import { Grommet, Box, Button, Heading, Text, Paragraph } from 'grommet'
 import { Previous } from 'grommet-icons'
 
 
-export default () => {
-    
+export default () => {    
   return (
           <Box background="accent-4" round="medium" align="center" justify="center" pad="xsmall" margin="xsmall">        
               <Box align="center" justify="center" pad="large" margin="medium" background={{"dark":false,"color":"light-2","image":"url('https://avatars0.githubusercontent.com/u/1753301?s=460&v=4\n')"}} round="full" />
