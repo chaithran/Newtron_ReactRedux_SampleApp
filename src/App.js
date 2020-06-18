@@ -80,7 +80,7 @@ export class App extends Component {
 
             <Box gap="xsmall" fill={true} overflow="auto" align="center" flex="grow">
 
-              <Header margin="xsmall" round="small" background="black" direction="row" flex={false} gap="medium" fill="horizontal" pad="small">
+              <Header round="small" background="black" direction="row" flex={false} gap="medium" fill="horizontal" pad="small">
                 <Box align="start" justify="center" direction="row" gap="xsmall">
                   <Apps></Apps>
                 </Box>
