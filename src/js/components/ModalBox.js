@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Box,Button} from 'grommet';
+import {Close} from 'grommet-icons';
 // import '../../App'
 
 const propTypes = {
@@ -11,17 +13,19 @@ class ModalBox extends React.Component {
 
     static open = (id) => (e) => {
         e.preventDefault();
+        console.log(id+" openid");     
         let modal = ModalBox.modals.find(x => x.props.id === id);
         modal.setState({ isOpen: true });
         document.body.classList.add('modal-open');
     }
 
     static close = (id) => (e) => {
+        console.log(id+"welc"); 
         e.preventDefault();
         let modal = ModalBox.modals.find(x => x.props.id === id);
         modal.setState({ isOpen: false });
         document.body.classList.remove('modal-open'); 
-        console.log(id+"id");     
+            
         if(id=="success")
         modal.props.handlerIsLoggedIn();
         // console.log("closeNew"+modal.props.id);
@@ -44,6 +48,7 @@ class ModalBox extends React.Component {
     }
 
     handleClick(e) {
+        console.log("samp "+this.props.id)
         if (e.target.className === 'modal') {
             ModalBox.close(this.props.id)(e);
         }
@@ -51,14 +56,17 @@ class ModalBox extends React.Component {
     
     render() {
         return (
-            <div background="white" style={{display: + this.state.isOpen ? '' : 'none'}} onClick={this.handleClick} ref={el => this.element = el}>
-                <div className="modal">
+            <Box>
+            <div background="white" style={{display: + this.state.isOpen ? '' : 'none'}} ref={el => this.element = el}>
+              
+                <div className="modal" ><div style={{'text-align':'right'}}> <Button icon={<Close />} onClick={ModalBox.close(this.props.id)} /></div>
                     <div className="modal-body">
                         {this.props.children}
                     </div>
                 </div>
                 <div className="modal-background"></div>
             </div>
+            </Box>
         );
     }
 }

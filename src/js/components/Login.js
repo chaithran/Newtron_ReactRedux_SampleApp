@@ -139,28 +139,10 @@ class Login extends Component {
                                     <ModalBox id="success" handlerIsLoggedIn={this.props.handlerIsLoggedIn}>
                                         <h2>Welcome {this.state.username}! You have successfully logged In !</h2>
 
-                                        <Button onClick={ModalBox.close('success')}>Close</Button>
+                                        {/* <Button onClick={ModalBox.close('success')}>Close</Button> */}
                                     </ModalBox>
 
-                                    <ModalBox id="register" handleRegister={this.props.handleRegister}>
-                                    <Button onClick={ModalBox.close('register')}>Close</Button>
-                                        <Register></Register>
-                                        {/* <Form
-                                            // value={value}
-                                            // onChange={value => this.setState({ value })}
-                                            onSubmit={this.onSubmit}
-                                        >
-                                            <FormField label="Name" name="name" required />
-                                            <FormField label="Email" name="email" type="email" />
-                                            <FormField label="Employee ID" name="employeeId" validate={/^[0-9]+$/} />
-                                            <FormField label="Size" name="size" options={['small', 'medium', 'large']} /> {/* renders RadioButtons 
-                                            <FormField label="Comments" name="comments">
-                                                <TextArea name="comments" />
-                                            </FormField>
-                                            <Button type="submit" label="Update" />
-                                        </Form> */}
-                                        
-                                    </ModalBox>
+                                    
                                 </Box>
                                 <Box align="center" justify="center" border={{ "color": "grey", "size": "small", "side": "all" }} margin={{ "top": "medium" }}>
                                     <Text textAlign="center" justify="center" size="medium" color="red" >
@@ -169,7 +151,10 @@ class Login extends Component {
                                 <Box>
                                     <Button label="Register here !" align="center" 
                                     onClick={ModalBox.open("register")} icon={<UserAdd color="white" />} margin={{ "top": "medium", bottom: "medium" }} />
-
+<ModalBox id="register" handleRegister={this.props.handleRegister}>
+                                    {/* <Button onClick={ModalBox.close('register')} align="right">Close</Button> */}
+                                        <Register></Register>                                        
+                                    </ModalBox>
                                 </Box></Form>
                         </Main>
                     </Box>
