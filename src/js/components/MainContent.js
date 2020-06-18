@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Grommet, Main, Box, Image, Heading, Paragraph, Tabs, Tab, WorldMap } from 'grommet'
 import { Action, Achievement, Aggregate, Ad } from 'grommet-icons'
-import logo from '../../img/b2.jpg';
+import logo from '../../img/b9.PNG';
 
 export default class MainContent extends Component {
     render() {
@@ -23,7 +23,7 @@ export default class MainContent extends Component {
           </Paragraph>
                        
                             <Tabs justify="center" style={{"padding-top": "inherit","margin-bottom": "0px","margin-top": "0px"}}>
-                                <Tab title="ASSESS RISK AND IMPACT" icon={<Action />} plain={false} reverse={false} />
+                                <Tab title="ASSESS RISK AND IMPACT" icon={<Action />} />
                                 <Tab title="ENSURE BUSINESS CONTINUITY" icon={<Achievement />} />
                                 <Tab title="BUILT ON SUPPLY CHAIN COLLABORATION" icon={<Aggregate />} />
                                 <Tab title="INTEGRATE TRANSPORTATION AND PRODUCTION" icon={<Ad />} />

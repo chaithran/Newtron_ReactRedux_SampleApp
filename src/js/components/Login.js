@@ -88,7 +88,7 @@ class Login extends Component {
         const { errors } = this.state;
         return (
             <>
-                <Box overflow="auto" background="black" align="center" justify="center" pad="small" round="small" margin="xsmall" >
+                <Box overflow="auto" background="black" align="center" justify="center" pad="small" round="small" margin={{"top":"small","bottom":"large"}} >
                 <Box alig="center" justify="center" margin="small">
                             <Text size="large"><strong>Welcome</strong></Text>
                         </Box>

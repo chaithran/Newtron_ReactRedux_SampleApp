@@ -74,8 +74,8 @@ class Companies extends Component{
   render(){
     const { companies }=this.props;
     return(
-    <Box align='center' pad='large' background="grey">
-      <DataTable columns={columns} data={companies} />
+    <Box align='center' height="80vh" margin="small" round="medium" pad='large' background="#43968D">
+      <DataTable border="black" round="small" columns={columns} data={companies} />
     </Box>    
     );
   }

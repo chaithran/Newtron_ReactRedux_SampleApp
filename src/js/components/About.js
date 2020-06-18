@@ -29,7 +29,7 @@ export default class About extends Component {
                         </Carousel></Box>
                     <Box align="center" justify="center" margin="xsmall" >
                         <h2>OUR VISION</h2>
-                        <Box background="grey" justify="center" round="small" >
+                        <Box pad="xsmall" background="black" justify="center" round="small" >
                             <h4>
                                 “Trade smart”- comprehensible and for everyone!
                                 It is with a bold and ambitious vision that we define the long-term direction of our company and enable our customers to benefit from a rewarding, continuous partnership.

@@ -23,7 +23,7 @@ class Reports extends Component {
     render() {
         const { companies } = this.props;
         return (
-            <Box align='center' pad='large' background="grey">
+            <Box margin="small" round="medium" height="80vh" align='center' pad='large' background="black">
                 <DoughnutChart
                     data={{
                         labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -36,7 +36,7 @@ class Reports extends Component {
                     }}
                     options={{
                         legend: {
-                            display: false,
+                            display: true,
                         },
                         themedData: true,
                     }}
