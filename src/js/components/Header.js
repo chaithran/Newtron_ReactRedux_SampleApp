@@ -30,8 +30,12 @@ class Header extends Component {
         return (
             <Box overflow="auto" align="center" flex="grow" direction="row" justify="center" pad="large"
                 background="grey" round="true" >
-                <Image src="https://photos.smugmug.com/Pinnacles-May-2019/n-8KLNDR/i-bxkrqwL/0/1c7fa7f2/M/i-bxkrqwL-M.jpg"
-                    round="true" fit="contain" align="left" />
+                {/* <Image src="https://photos.smugmug.com/Pinnacles-May-2019/n-8KLNDR/i-bxkrqwL/0/1c7fa7f2/M/i-bxkrqwL-M.jpg"
+                    round="true" fit="contain" align="left" /> */}
+                     <Box fill="vertical" overflow="auto" align="center" flex="grow">
+        <Image src="https://photos.smugmug.com/Pinnacles-May-2019/n-8KLNDR/i-bxkrqwL/0/1c7fa7f2/M/i-bxkrqwL-M.jpg" 
+        fill="horizontal" fit="contain" />
+      </Box>
                 <Button label="Contact" name="Contact" icon={<Contact />} onClick={this.handleClick_Contact} />
                 <Button label="About" value="About" icon={<Achievement />} onClick={this.handleClick_About} />
                 <Button label="Logout" value="Contact" icon={<Login />} onClick={this.handleClick_LogOut} />
