@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   suppliers: [{ id: "1", title: "Supplier name" }],
-  isLoggedIn: true,
+  isLoggedIn: false,
   currentUser: 'chai',
   setMainPage: HOME_MAINPAGE,
   selectedSupplier:1

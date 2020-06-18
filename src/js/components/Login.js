@@ -143,7 +143,8 @@ class Login extends Component {
                                     </ModalBox>
 
                                     <ModalBox id="register" handleRegister={this.props.handleRegister}>
-                                        <Form
+                                        <Register></Register>
+                                        {/* <Form
                                             // value={value}
                                             // onChange={value => this.setState({ value })}
                                             onSubmit={this.onSubmit}
@@ -151,12 +152,12 @@ class Login extends Component {
                                             <FormField label="Name" name="name" required />
                                             <FormField label="Email" name="email" type="email" />
                                             <FormField label="Employee ID" name="employeeId" validate={/^[0-9]+$/} />
-                                            <FormField label="Size" name="size" options={['small', 'medium', 'large']} /> {/* renders RadioButtons */}
+                                            <FormField label="Size" name="size" options={['small', 'medium', 'large']} /> {/* renders RadioButtons 
                                             <FormField label="Comments" name="comments">
                                                 <TextArea name="comments" />
                                             </FormField>
                                             <Button type="submit" label="Update" />
-                                        </Form>
+                                        </Form> */}
                                         <button onClick={ModalBox.close('register')}>Close</button>
                                     </ModalBox>
                                 </Box>
