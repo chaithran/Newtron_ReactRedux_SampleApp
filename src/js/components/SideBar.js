@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Box, Button, Header, Menu, Anchor, Footer, Sidebar } from 'grommet';
+import { Box, Button, Header, Menu, Text, Anchor, Footer, Sidebar } from 'grommet';
 import Suppliers from './Suppliers';
-import { User, Group } from 'grommet-icons';
+import { User, Group, Organization } from 'grommet-icons';
 import { SUPPLIER_MAINPAGE, COMPANIES_MAINPAGE } from "../constants/action-types";
 
 class SideBar extends Component {
@@ -29,19 +29,33 @@ class SideBar extends Component {
 
     render() {
         return (
-
-            <Sidebar colorIndex='neutral-1' fixed={false} background="green">
-                <Header pad='medium'
-                    justify='between'> Header
-                </Header>
-                <Box flex='grow' justify='start' align="center">
-                    <Anchor href='#' onClick={this.handleClick_Suppliers} className='active'> Suppliers </Anchor>
-                    <Anchor href='#' onClick={this.handleClick_Companies}>Companies</Anchor>
-                </Box>
-                <Footer pad='medium'>
-                    <Button icon={<User />} />
-                </Footer>
-            </Sidebar>
+            <Box gridArea="sidebar" width="xsmall" round="xsmall" height="100vh" margin="xsmall"
+                animation={[
+                    { type: "slideRight", size: "large", duration: 300 }
+                ]} >
+                <Sidebar colorIndex='neutral-1' background="#223E4F" round="xsmall">
+                    <Box gap="small" flex='grow' justify='start' align="center">
+                        <Button href='#' onClick={this.handleClick_Suppliers} hoverIndicator>
+                            <Box width="6vw" background="darkcyan" round="xsmall" margin={{"top":"small"}} gap="xsmall" align="center" justify="center">
+                               <Group/>
+                               <Text margin="xsmall" size="small"> <strong>Suppliers</strong></Text>
+                            </Box>
+                         </Button>
+                         <Button href='#' onClick={this.handleClick_Companies} hoverIndicator>
+                            <Box width="6vw" background="darkcyan" round="xsmall" margin={{"top":"small"}} gap="xsmall" align="center" justify="center">
+                               <Organization/>
+                               <Text margin="xsmall" size="small"> <strong>Companies</strong></Text>
+                            </Box>
+                         </Button>
+                         <Button href='#' onClick={this.handleClick_Companies} hoverIndicator>
+                            <Box width="6vw" background="darkcyan" round="xsmall" margin={{"top":"small"}} gap="xsmall" align="center" justify="center">
+                               <Organization/>
+                               <Text margin="xsmall" size="small"> <strong>Products</strong></Text>
+                            </Box>
+                         </Button>
+                    </Box>
+                </Sidebar>
+            </Box>
 
         )
     }

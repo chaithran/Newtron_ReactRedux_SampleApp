@@ -114,7 +114,7 @@ const DATA = [
 
 const Companies = () => (
 //   <Grommet >
-    <Box align='center' pad='large' background="blue">
+    <Box align='center' pad='large'>
       <DataTable columns={columns} data={DATA} />
     </Box>
 //   </Grommet>

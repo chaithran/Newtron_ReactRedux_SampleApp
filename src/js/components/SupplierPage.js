@@ -16,7 +16,7 @@ class SupplierPage extends Component {
     render() {
         const{selectedSupplier}=this.props;
         return (
-            <Box fill background="black" scroll="true">
+            <Box fill background="black" overflow="auto" round="xsmall">
                 <Grid
                     fill
                     rows={["auto", "flex"]}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Grommet, Box, Image, Button } from 'grommet'
-import { Login, Contact, Achievement, Logout } from 'grommet-icons';
+import { Grommet, Box, Image, Button, Menu, Text } from 'grommet'
+import { Login, User, Contact, Logout, Apps, Article } from 'grommet-icons';
 import { CONTACTS_MAINPAGE, ABOUT_MAINPAGE } from "../constants/action-types";
 
 class Header extends Component {
@@ -28,28 +28,28 @@ class Header extends Component {
     }
     render() {
         return (
-            <Box overflow="auto" align="center" flex="grow" direction="row" justify="center" pad="large"
-                background="grey" round="true" >
-                {/* <Image src="https://photos.smugmug.com/Pinnacles-May-2019/n-8KLNDR/i-bxkrqwL/0/1c7fa7f2/M/i-bxkrqwL-M.jpg"
-                    round="true" fit="contain" align="left" /> */}
-                     <Box fill="vertical" overflow="auto" align="center" flex="grow">
-        <Image src="https://photos.smugmug.com/Pinnacles-May-2019/n-8KLNDR/i-bxkrqwL/0/1c7fa7f2/M/i-bxkrqwL-M.jpg" 
-        fill="horizontal" fit="contain" />
-      </Box>
-                <Button label="Contact" name="Contact" icon={<Contact />} onClick={this.handleClick_Contact} />
-                <Button label="About" value="About" icon={<Achievement />} onClick={this.handleClick_About} />
-                <Button label="Logout" value="Contact" icon={<Login />} onClick={this.handleClick_LogOut} />
+            <Box gap="medium" margin="small" direction="row" align="center" justify="between">
+                <Box margin={{ "left": "xsmall" }} align="center" justify="center" direction="row" gap="xsmall">
+                    <Apps></Apps>
+                </Box>
+
+                <Box gp="small" justify="center">
+                    <Box gap="xsmall" height="8vh" direction="row" >
+                    <Button style={{ width:"9vw", border: "2px solid #223E4F", "border-radius": "10px" }} label={<Text weight="bold">Contact</Text>} name="Contact" icon={<Contact />} onClick={this.handleClick_Contact} />
+                    <Button style={{ width:"9vw", border: "2px solid #223E4F", "border-radius": "10px" }} label={<Text weight="bold">About</Text>} value="About" icon={<Article />} onClick={this.handleClick_About} />
+                    <Menu style={{ border: "2px solid #223E4F", "border-radius": "10px" }}
+                        label={<Text weight="bold">Help?</Text>} round={{ side: 'top', size: 'small' }}
+                        hoverIndicator={true}
+                        items={[{ "label": "User Guide" },
+                        { "label": "Blog" }]} />
+                        <Menu style={{ width:"6vw", padding:"0px", border: "2px solid #223E4F", "border-radius": "10px" }}
+                            label={<Text weight="bold"> <User /> </Text>} round={{ side: 'top', size: 'small' }}
+                            hoverIndicator={true}
+                            items={[{ "label": "Settings" },
+                            { "label": "Logout", onClick: this.handleClick_LogOut }]} />
+                    </Box>
+                </Box>
             </Box>
-            // <Box>
-            //     {/* <Navigation /> */}
-            // </Box>
-            // <Box>
-            //     {
-            //         // this.state.isLoggedIn ? <Button icon={<Logout />} label="Logout" onClick={this.toggleFn} /> :
-            //         //     <LoginPage isLoggedIn={this.state.isLoggedIn}>Login Page Render</LoginPage>
-            //     }
-            // </Box>
-            // </Grommet>
         );
     }
 }

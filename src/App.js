@@ -54,15 +54,14 @@ export class App extends Component {
           :
           <section style={sectionStyle} overflow="auto">
 
-            <Box fill={true} overflow="auto" align="center" flex="grow">
+            <Box gap="xsmall" fill={true} overflow="auto" align="center" flex="grow">
 
-              <Header background="black" direction="row" flex={false} gap="medium" fill="horizontal" pad="small">
+              <Header margin="xsmall" round="small" background="black" direction="row" flex={false} gap="medium" fill="horizontal" pad="small">
                 <Box align="start" justify="center" direction="row" gap="xsmall">
                   <Apps></Apps>
-                  {/* <Text size="xlarge" weight="bold" color="white"> Welcome to Portal </Text> */}
                 </Box>
 
-                <Box align="right" direction="row" >
+                <Box direction="row" >
                   <Menu label={<Text weight="bold">Help?</Text>} round={{ side: 'top', size: 'small' }}
                     elevation="medium" hoverIndicator={true}
                     items={[{ "label": "User Guide" },
@@ -76,14 +75,7 @@ export class App extends Component {
                       open={false} />
                   </Box>
                 </Box>
-
               </Header>
-
-              {/* 
-            <Box align="center" justify="center" color="white" direction="row">
-              <Heading background="red" level="3"> Welcome to Portal
-              </Heading>
-            </Box> */}
               <Box margin={{ "top": "small" }} align="center"> <Login handlerIsLoggedIn={this.handlerIsLoggedIn.bind(this)}
                 handleCurrentUser={this.handleCurrentUser.bind(this)} /> </Box>
             </Box>

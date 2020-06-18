@@ -7,7 +7,7 @@ export default class MainContent extends Component {
         return (
             <>
              {/* <Main fill="vertical" flex="grow" overflow="auto"> */}
-                <Box align="center" justify="center">
+                <Box align="center" justify="center" round="xsmall">
                     <Image src="https://photos.smugmug.com/Pinnacles-May-2019/n-8KLNDR/i-bxkrqwL/0/1c7fa7f2/M/i-bxkrqwL-M.jpg" fill="horizontal" fit="cover" />
                 </Box>
                 <Box align="center" justify="center" direction="column" pad="medium" gap="xxsmall" overflow="hidden">
