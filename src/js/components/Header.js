@@ -28,7 +28,7 @@ class Header extends Component {
     }
     render() {
         return (
-            <Box border="white" gap="medium" margin={{"left":"small","right":"small"}} direction="row" align="center" justify="between">
+            <Box gap="medium" margin={{"left":"small","right":"small"}} direction="row" align="center" justify="between">
                 <Box margin={{ "left": "xsmall" }} align="center" justify="center" direction="row" gap="xsmall">
                     <Apps></Apps>
                 </Box>
