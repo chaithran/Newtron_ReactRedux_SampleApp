@@ -1,34 +1,43 @@
 import React, { Component } from 'react'
-import { Grommet, Main, Box, Image, Text, Heading, Paragraph } from 'grommet'
+import { Grommet, Main, Box, Image, Text, Heading, Paragraph, Carousel, Clock } from 'grommet'
+import logo from '../../img/home.jpg';
+import img1 from '../../img/background3.jpg';
 
+
+var sectionStyle = {
+    // width: "inherit",
+    height: '100%',
+    backgroundImage: `url(${logo})`,
+    overflow: "static",
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',
+};
 export default class About extends Component {
     render() {
         return (
-                <Main fill="vertical" flex="grow" overflow="static" direction="column">
-                    <Box align="center" justify="center" direction="column" pad="medium" gap="small" fill="horizontal" background={{ "color": "accent-4" }} border={{ "color": "active-background", "size": "medium", "side": "all", "style": "solid" }} elevation="small" round="medium">
-                        <Image src="https://photos.smugmug.com/Pinnacles-May-2019/n-8KLNDR/i-bxkrqwL/0/1c7fa7f2/M/i-bxkrqwL-M.jpg" fill="horizontal" fit="contain" opacity="strong" />
-                        <Text size="xxlarge" textAlign="center" weight="bold" margin="medium" color="graph-2">
-                            ABOUT
-          </Text>
+            <section style={sectionStyle}> <Clock type="digital" justify="right" />
+                <Box fill={true} align="center" flex="grow">
+                    <Box background="white" justify="center" gap="xsmall" margin="xsmall" round="small">
+                        <Text size="xxlarge" textAlign="center" pad="xxsmall" weight="bold" margin="xsmall" color="black">
+                            ABOUT    </Text>
                     </Box>
-                    <Box align="center" justify="center">
-                        <Heading level="3" size="medium" textAlign="center" truncate={false}>
-                            WE ARE ALWAYS THERE FOR YOU
-                            AS THE STRONG PARTNER BY YOUR SIDE     </Heading>
-                        <Paragraph size="xlarge">
-                            A leading provider of web-based solutions for the optimization of business relations between suppliers and buying companies
-          </Paragraph>
-                    </Box>
-                    <Box align="center" justify="center">
-                        <Heading level="3" size="medium" textAlign="center" truncate={false}>
-                        OUR VISION</Heading>
-                        <Paragraph size="xlarge">
-                        “Trade smart”- comprehensible and for everyone!
-It is with a bold and ambitious vision that we define the long-term direction of our company and enable our customers to benefit from a rewarding, continuous partnership.
-            </Paragraph>
-                    </Box>
-                   
-     </Main>
+                    <Box height="small" margin="small" width="large" overflow="hidden" background="color">
+                        <Carousel fill>
+                            <Image fit="cover" src="//v2.grommet.io/assets/IMG_4245.jpg" />
+                            <Image fit="cover" src={img1} />
+                            <Image fit="cover" src="//v2.grommet.io/assets/IMG_4210.jpg" />
+                        </Carousel></Box>
+                    <Box align="center" justify="center" margin="xsmall" >
+                        <h2>OUR VISION</h2>
+                        <Box background="grey" justify="center" round="small" >
+                            <h4>
+                                “Trade smart”- comprehensible and for everyone!
+                                It is with a bold and ambitious vision that we define the long-term direction of our company and enable our customers to benefit from a rewarding, continuous partnership.
+                            </h4></Box>
+                    </Box>   </Box>
+            </section>
+            //   </Main> 
+            //  </Grommet>
         )
     }
 }
