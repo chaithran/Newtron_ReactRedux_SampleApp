@@ -40,12 +40,12 @@ class Header extends Component {
                     <Menu style={{ border: "2px solid #223E4F", "border-radius": "10px" }}
                         label={<Text weight="bold">Help?</Text>} round={{ side: 'top', size: 'small' }}
                         hoverIndicator={true}
-                        items={[{ "label": "User Guide" },
+                        items={[
                         { "label": "Blog" }]} />
                         <Menu style={{ width:"6vw", padding:"0px", border: "2px solid #223E4F", "border-radius": "10px" }}
                             label={<Text weight="bold"> <User /> </Text>} round={{ side: 'top', size: 'small' }}
                             hoverIndicator={true}
-                            items={[{ "label": "Settings" },
+                            items={[
                             { "label": "Logout", onClick: this.handleClick_LogOut }]} />
                     </Box>
                 </Box>

@@ -42,8 +42,9 @@ export default class SupplierDetails extends Component {
         {/* <Heading>
           <Heading.Title componentClass="h3">{this.state.supplierDetails.data.name}</Heading.Title>
         </Heading> */}
-        <Box margin={{"top":"xsmall"}} width="66vw" round="small" elevation="small" pad="small" background="white">
-          <div>
+         <Box margin={{"top":"xsmall"}} border="true"width="66vw" round="small" elevation="small" pad="small" background="cadetblue">
+          <Box border="all" margin="medium" pad="small"> 
+            
             <p>Name : {this.state.supplierDetails.data.name}</p>
             <p>Email : {this.state.supplierDetails.data.email}</p>
             <p>Phone : {this.state.supplierDetails.data.phone}</p>
@@ -53,7 +54,7 @@ export default class SupplierDetails extends Component {
             <p>Organization : {this.state.supplierDetails.data.organization}</p>
             <p>Job Profile : {this.state.supplierDetails.data.jobProfile}</p>
             <p>Additional Info : {this.state.supplierDetails.data.additionalInfo}</p>
-          </div>
+          </Box>
         </Box>
       </Box>
     </div>)

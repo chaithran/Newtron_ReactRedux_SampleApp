@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { Grommet, Main, Box, Image, Text, Heading, Paragraph, Carousel, Clock } from 'grommet'
 import logo from '../../img/home.jpg';
 import img1 from '../../img/background3.jpg';
-
+import img2 from '../../img/img2.jpg';
+import img3 from '../../img/img3.jpg';
 
 var sectionStyle = {
     // width: "inherit",
@@ -22,10 +23,12 @@ export default class About extends Component {
                             ABOUT    </Text>
                     </Box>
                     <Box height="small" margin="small" width="large" overflow="hidden" background="color">
-                        <Carousel fill>
-                            <Image fit="cover" src="//v2.grommet.io/assets/IMG_4245.jpg" />
-                            <Image fit="cover" src={img1} />
-                            <Image fit="cover" src="//v2.grommet.io/assets/IMG_4210.jpg" />
+                        <Carousel fill>                           
+                            <Image fit="auto" src={img3} />
+                            <Image fit="auto" src={img2} />
+                            <Image fit="auto" src="//v2.grommet.io/assets/IMG_4245.jpg" />
+                            <Image fit="auto" src={img1} />
+                            {/* <Image fit="auto" src="//v2.grommet.io/assets/IMG_4210.jpg" /> */}
                         </Carousel></Box>
                     <Box align="center" justify="center" margin="xsmall" >
                         <h2>OUR VISION</h2>

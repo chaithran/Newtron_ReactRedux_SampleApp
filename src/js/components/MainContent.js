@@ -9,7 +9,7 @@ export default class MainContent extends Component {
             <>
                 <Main fill="vertical" flex="grow" overflow="auto">
                     <Box overflow="auto" >
-                        <Box align="center" justify="center" fit="content" pad="small" margin="small" display="inline">
+                        <Box align="center" justify="center" pad="small" margin="small" display="inline">
                             <Image src={logo} style={{"display": "inline-flex", "width": "100%","height": "100%"}} />
                             {/* // "https://photos.smugmug.com/Pinnacles-May-2019/n-8KLNDR/i-bxkrqwL/0/1c7fa7f2/M/i-bxkrqwL-M.jpg" fill="horizontal" fit="cover" /> */}
                         </Box>

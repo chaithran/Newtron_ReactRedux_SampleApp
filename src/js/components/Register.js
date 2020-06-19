@@ -14,10 +14,9 @@ class Register extends Component {
     }
 
     handleChange = (event) => {
-        event.preventDefault();
-        const { name, value } = event.target;
+        event.preventDefault();       
         let errors = this.state.errors;
-        //  firstname, lastname,email, password,repassword, checked 
+        const { name, value } = event.target;
         switch (name) {
             case 'firstname':
                 errors.firstname =
@@ -63,10 +62,10 @@ class Register extends Component {
             ...this.state, [event.target.name]: valueState
         });
     }
-
     handleSubmitReg = (event) => {
         event.preventDefault();
         if (this.validateFormReg(this.state.errors)) {
+            this.setState({...this.state,[event.target.name]:""});
             this.inputElementReg.click();
             this.inputElementNew.click();
         } else {
@@ -83,32 +82,32 @@ class Register extends Component {
     render() {
         const { errors } = this.state;
         return (
-            <> <Box alig="center" justify="center" margin="small" pad="medium" background="accent-1" color="white">
-            <Text size="medium"><strong>Register new User</strong></Text>
+            <> <Box alig="center" margin="xxsmall" justify="center" pad="medium" background="accent-1" color="white">
+            <Text size="large"><strong>Register new User</strong></Text>
         </Box>
             <Form >
                 <FormField label="First Name" color="accent-1" name="firstname">
-                    <TextInput placeholder="Enter your name" name="firstname" required onChange={this.handleChange} size="medium" type="text" icon={<FormEdit />} />
+                    <TextInput placeholder="Enter your name" name="firstname" value={this.state.firstname} required onChange={this.handleChange} size="medium" type="text" icon={<FormEdit />} />
                     {errors.firstname.length > 0 && <span className='error'>{errors.firstname}</span>}
 
                 </FormField>
                 <FormField label="Last Name" name="lastname" color="accent-1">
-                    <TextInput icon={<FormEdit />} name="lastname" required onChange={this.handleChange} placeholder="Enter your last name" name="lastname" />
+                    <TextInput icon={<FormEdit />} name="lastname" value={this.state.lastname} required onChange={this.handleChange} placeholder="Enter your last name" name="lastname" />
                     {errors.lastname.length > 0 && <span className='error'>{errors.lastname}</span>}
 
                 </FormField>
                 <FormField label="Email" name="email" >
-                    <TextInput placeholder="Enter your email address" required onChange={this.handleChange} name="email" icon={<Mail />} />
+                    <TextInput placeholder="Enter your email address" value={this.state.email} required onChange={this.handleChange} name="email" icon={<Mail />} />
                     {errors.email.length > 0 && <span className='error'>{errors.email}</span>}
 
                 </FormField>
-                <FormField label="Password" color="accent-1" name="firstname" required onChange={this.handleChange} name="password" >
+                <FormField label="Password" color="accent-1" name="firstname" value={this.state.password} required onChange={this.handleChange} name="password" >
                     <TextInput icon={<Lock />} placeholder="Choose password" name="password" required onChange={this.handleChange} type="password" />
                     {errors.password.length > 0 && <span className='error'>{errors.password}</span>}
 
                 </FormField>
                 <FormField label="Re-enter Password" >
-                    <TextInput type="password" icon={<Lock />} name="repassword" required onChange={this.handleChange} placeholder="Enter your password again" />
+                    <TextInput type="password" icon={<Lock />} name="repassword" value={this.state.repassword}required onChange={this.handleChange} placeholder="Enter your password again" />
                     {errors.repassword.length > 0 && <span size="12" className='error'>{errors.repassword}</span>}
 
                 </FormField>
