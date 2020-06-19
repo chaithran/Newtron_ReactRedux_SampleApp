@@ -54,8 +54,8 @@ class Suppliers extends Component {
                 <div >
                     {
                         suppliers.map(supplier =>
-                            <Box background="dimgrey" round="medium" align="center" justify="center" pad="xsmall" margin="xsmall">
-                                <Box pad="small" margin="xsmall" background={{ "dark": false, "color": "light-2", "image": "url('https://avatars0.githubusercontent.com/u/1753301?s=460&v=4\n')" }} round="full" />
+                            <Box background="lightslategrey" round="medium" align="center" justify="center" pad="xsmall" margin="xsmall">
+                                <Box pad="small" margin="xsmall" size="medium"  background={{ "dark": false, "color": "light-2", "image": "url('https://avatars0.githubusercontent.com/u/1753301?s=460&v=4\n')" }} round="full" />
                                 <Heading level="4" size="medium" margin="xsmall" textAlign="center">
                                     {supplier.name}
                                 </Heading>
