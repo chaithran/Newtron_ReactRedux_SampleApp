@@ -1,11 +1,12 @@
 import {
   ADD_SUPPLIER, TOGGLE_IS_LOGGED, UPDATE_CURRENTUSER, SET_MAINPAGE,
-  HOME_MAINPAGE,SET_SELECTEDSUPPLIER
+  HOME_MAINPAGE,SET_SELECTEDSUPPLIER,SUPPLIER_DATA_LOADED,COMPANIES_DATA_LOADED
 } from "../constants/action-types";
 
 
 const initialState = {
-  suppliers: [{ id: "1", title: "Supplier name" }],
+  suppliers: [],
+  companies:[],
   isLoggedIn: true,
   currentUser: 'chai',
   setMainPage: HOME_MAINPAGE,
@@ -36,6 +37,18 @@ function rootReducer(state = initialState, action) {
   if (action.type == SET_SELECTEDSUPPLIER) {
     return Object.assign({}, state, {
       selectedSupplier: action.payload
+    });
+  }
+  if(action.type==SUPPLIER_DATA_LOADED){
+    state.suppliers=[];
+    return Object.assign({}, state, {      
+      suppliers: state.suppliers.concat(action.payload)
+    });
+  }
+  if(action.type==COMPANIES_DATA_LOADED){
+    state.companies=[];
+    return Object.assign({}, state, {      
+      companies: state.companies.concat(action.payload)
     });
   }
   return state;

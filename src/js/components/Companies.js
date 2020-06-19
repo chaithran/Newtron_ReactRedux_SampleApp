@@ -1,11 +1,19 @@
-import React from 'react';
-// import { Grommet } from '@bit/grommet.grommet.grommet';
-// import { grommet } from '@bit/grommet.grommet.themes';
-// import { Box } from '@bit/grommet.grommet.box';
-// import { DataTable } from '@bit/grommet.grommet.data-table';
-// import { Meter } from '@bit/grommet.grommet.meter';
-// import { Text } from '@bit/grommet.grommet.text';
+import React,{Component} from 'react';
 import {Grommet,Box,DataTable,Meter,Text} from 'grommet';
+import { connect } from 'react-redux';
+import { getData_Companies } from '../actions';
+
+const mapStateToProps = state => {
+  return {
+      companies: state.companies,
+  };
+};
+function mapDispatchToProps(dispatch) {
+  return {
+      getData_Companies:()=>dispatch(getData_Companies())
+  };
+}
+
 const amountFormatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
@@ -112,12 +120,23 @@ const DATA = [
   }
 ];
 
-const Companies = () => (
-//   <Grommet >
-    <Box align='center' pad='large' background="blue">
-      <DataTable columns={columns} data={DATA} />
-    </Box>
-//   </Grommet>
-);
+class Companies extends Component{
+  constructor(props){
+    super(props);
+    this.state={ companies:[]}
+  }
+  componentDidMount() {
+    this.props.getData_Companies();
+}
 
-export default Companies
+  render(){
+    const { companies }=this.props;
+    return(
+    <Box align='center' pad='large' background="blue">
+      <DataTable columns={columns} data={companies} />
+    </Box>    
+    );
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Companies);
