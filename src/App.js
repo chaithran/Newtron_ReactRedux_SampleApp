@@ -88,15 +88,14 @@ export class App extends Component {
                 <Box direction="row" >
                   <Menu label={<Text weight="bold">Help?</Text>} round={{ side: 'top', size: 'small' }}
                     elevation="medium" hoverIndicator={true}
-                    items={[{ "label": "User Guide" },
-                          { "label": "Blog" }]} />
+                    items={[{ "label": "Blog" }]} />
                   <Box direction="column">
-                    <Menu label={<Text weight="bold">About</Text>} round={{ side: 'top', size: 'small' }}
+                    {/* <Menu label={<Text weight="bold">About</Text>} round={{ side: 'top', size: 'small' }}
                       elevation="medium" hoverIndicator={true}
                       items={[{ "label": "About" },
                       { "label": "Wiki" },
                       { "label": "Contact Support" }]}
-                      open={false} />
+                      open={false} /> */}
                   </Box>
                 </Box>
               </Header>
