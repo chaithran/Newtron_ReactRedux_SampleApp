@@ -16,7 +16,7 @@ export default class Contact extends Component {
                 <Box >
                  {/* align="center" justify="center" direction="column" pad="medium" gap="small" fill="horizontal" background={{ "color": "accent-4" }} border={{ "color": "active-background", "size": "medium", "side": "all", "style": "solid" }} elevation="small" round="medium"> */}
                     <Image src="https://photos.smugmug.com/Pinnacles-May-2019/n-8KLNDR/i-bxkrqwL/0/1c7fa7f2/M/i-bxkrqwL-M.jpg" fill="horizontal" fit="contain" opacity="strong" />
-                    <Text size="xxlarge" textAlign="center" weight="bold" margin="medium" color="graph-2">
+                    <Text size="medium" textAlign="center" weight="bold" margin="medium" color="graph-2">
                         Contact
                     </Text>
                 </Box>
@@ -39,24 +39,24 @@ export default class Contact extends Component {
                     >
                         <Box gridArea="a" background="light-5" align="center" justify="center" direction="column" pad="medium" gap="small" fill="horizontal" border={{"color":"active-background","size":"medium","side":"all","style":"solid"}} elevation="small" round="medium">
                         <Heading>Customer Service / Support</Heading>
-                        <Paragraph size="xlarge">
+                        <Paragraph size="medium">
                         Support contact form<br/>support@abcd.de<br/>+12 (0) 123 456 78 </Paragraph>
                         </Box>
                         <Box gridArea="b"background="light-2" align="center" justify="center" direction="column" pad="medium" gap="small" fill="horizontal" border={{"color":"active-background","size":"medium","side":"all","style":"solid"}} elevation="small" round="medium">
                         <Heading>Sales</Heading>
-                        <Paragraph size="xlarge">
+                        <Paragraph size="medium">
                         Support contact form<br/>support@abcd.de<br/>+12 (0) 123 456 78 </Paragraph>
                         </Box>
                         <Box gridArea="c"background="light-4" align="center" justify="center" direction="column" pad="medium" gap="small" fill="horizontal" border={{"color":"active-background","size":"medium","side":"all","style":"solid"}} elevation="small" round="medium">
 
                         <Heading>Marketing / Press</Heading>
-                        <Paragraph size="xlarge">
+                        <Paragraph size="medium">
                         Marketing contact form<br/>marketing@newtron.de </Paragraph> 
                         </Box>
                         <Box gridArea="d"background="light-1" align="center" justify="center" direction="column" pad="medium" gap="small" fill="horizontal" border={{"color":"active-background","size":"medium","side":"all","style":"solid"}} elevation="small" round="medium">
 
                         <Heading>Locations</Heading>
-                        <Paragraph size="xlarge">
+                        <Paragraph size="medium">
                         India <br/> Germany </Paragraph>
                         </Box>
                     </Grid>

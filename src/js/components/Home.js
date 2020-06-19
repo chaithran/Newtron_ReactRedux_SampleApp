@@ -66,7 +66,7 @@ class Home extends Component {
               handlersetMainPage={this.handlersetMainPage.bind(this)}>
             </SideBar></Box>
           <Box gridArea="main" background="black" round="xsmall">
-            {/* {setMainPage == HOME_MAINPAGE && <MainContent></MainContent>} */}
+            {setMainPage == HOME_MAINPAGE && <MainContent></MainContent>}
             {setMainPage == SUPPLIER_MAINPAGE && <SupplierPage></SupplierPage>}
             {setMainPage == CONTACTS_MAINPAGE && <Contact></Contact>}
             {setMainPage == ABOUT_MAINPAGE && <About></About>}
