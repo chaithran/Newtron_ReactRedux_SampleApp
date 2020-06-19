@@ -70,10 +70,10 @@ class Login extends Component {
     }
 
     handleLogin = (event) => {
-        console.log("entry");
+        console.log("entry"+event.target.id);
+        if(event.target.id=="regLogin")
         this.inputElement.click();
         event.preventDefault();
-        console.log("exit");
     }
     componentWillReceiveProps(props) {
         this.setState({ isLoggedIn: props.isLoggedIn });
@@ -92,7 +92,7 @@ class Login extends Component {
                 <Box alig="center" justify="center" margin="small">
                             <Text size="large"><strong>Welcome</strong></Text>
                         </Box>
-                    <Form onSubmit={this.handleSubmit}>
+                    <Form id="regLogin"onSubmit={this.handleSubmit}>
                         <Box gap="small">
                             <Text  size="medium" weight="bold"> User name </Text>
                             <TextInput round="small" required value={this.state.username} icon={<FormEdit />} placeholder="Enter user name" background="white" name="username" onChange={this.handleChange} />

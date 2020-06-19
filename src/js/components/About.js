@@ -32,11 +32,11 @@ export default class About extends Component {
                         </Carousel></Box>
                     <Box align="center" justify="center" margin="xsmall" >
                         <h2>OUR VISION</h2>
-                        <Box pad="xsmall" background="black" justify="center" round="small" >
-                            <h4>
+                        <Box pad="xsmall" background="darkgrey" justify="center" round="small" >
+                            <h3>
                                 “Trade smart”- comprehensible and for everyone!
                                 It is with a bold and ambitious vision that we define the long-term direction of our company and enable our customers to benefit from a rewarding, continuous partnership.
-                            </h4></Box>
+                            </h3></Box>
                     </Box>   </Box>
             </section>
             //   </Main> 

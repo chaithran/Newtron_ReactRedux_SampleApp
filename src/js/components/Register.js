@@ -65,6 +65,7 @@ class Register extends Component {
     handleSubmitReg = (event) => {
         event.preventDefault();
         if (this.validateFormReg(this.state.errors)) {
+            console.log('reset')
             this.setState({...this.state,[event.target.name]:""});
             this.inputElementReg.click();
             this.inputElementNew.click();
@@ -85,7 +86,7 @@ class Register extends Component {
             <> <Box alig="center" margin="xxsmall" justify="center" pad="medium" background="accent-1" color="white">
             <Text size="large"><strong>Register new User</strong></Text>
         </Box>
-            <Form >
+            <Form id="regForm" onSubmit={this.handleSubmitReg}>
                 <FormField label="First Name" color="accent-1" name="firstname">
                     <TextInput placeholder="Enter your name" name="firstname" value={this.state.firstname} required onChange={this.handleChange} size="medium" type="text" icon={<FormEdit />} />
                     {errors.firstname.length > 0 && <span className='error'>{errors.firstname}</span>}
@@ -120,7 +121,7 @@ class Register extends Component {
                 </FormField>
 
 
-                <Button label="Register Now" icon={<UserAdd />} active={true} fill="horizontal" gap="small" hoverIndicator={true} plain={false} primary={false} reverse={false} secondary={false} size="large" onClick={this.handleSubmitReg} color="graph-3"
+                <Button label="Register Now" type="submit" icon={<UserAdd />} active={true} fill="horizontal" gap="small" hoverIndicator={true} plain={false} primary={false} reverse={false} secondary={false} size="large" color="graph-3"
                 />
                 <div onClick={ModalBox.close("register")} ref={input => this.inputElementReg = input}></div>
                 <div onClick={ModalBox.open("success_reg")} ref={input => this.inputElementNew = input}></div>

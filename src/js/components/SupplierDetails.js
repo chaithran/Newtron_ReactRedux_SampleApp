@@ -44,7 +44,7 @@ export default class SupplierDetails extends Component {
         </Heading> */}
          <Box margin={{"top":"xsmall"}} border="true"width="66vw" round="small" elevation="small" pad="small" background="cadetblue">
           <Box border="all" margin="medium" pad="small"> 
-            
+            <h2>Supplier Details</h2>
             <p>Name : {this.state.supplierDetails.data.name}</p>
             <p>Email : {this.state.supplierDetails.data.email}</p>
             <p>Phone : {this.state.supplierDetails.data.phone}</p>
