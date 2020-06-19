@@ -54,12 +54,12 @@ class Home extends Component {
             { name: "main", start: [1, 1], end: [1, 1] }
           ]}
         >
-          <Box gridArea="header" background="black"> <Header 
+          <Box gridArea="header" background="#a3a29b" pad="xsmall" round="xsmall"  height="25vh"> <Header 
           handlersetMainPage={this.handlersetMainPage.bind(this)}
           handlerToggleIsLoggedIn={this.handlerToggleIsLoggedIn.bind(this)}></Header></Box>
-          <Box gridArea="sidebar" background="black"> <SideBar
+          <Box gridArea="sidebar" background="#383734" pad="medium" round="medium"> <SideBar
           handlersetMainPage={this.handlersetMainPage.bind(this)}></SideBar></Box>
-          <Box gridArea="main" background="black">
+          <Box gridArea="main" background="#706f69" pad="medium" round="medium">
             {setMainPage==HOME_MAINPAGE && <MainContent></MainContent>}
             {setMainPage==SUPPLIER_MAINPAGE && <SupplierPage></SupplierPage>}
             {setMainPage==CONTACTS_MAINPAGE && <Contact></Contact>}            

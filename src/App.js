@@ -26,6 +26,27 @@ function mapDispatchToProps(dispatch) {
     updateCurrentUser: (user) => dispatch(updateCurrentUser(user))
   };
 }
+const theme = {
+  "global": {
+      "colors": {
+          "background": {
+              "img": { logo },
+              "light": "#ffffff",
+              "dark": "#000000"
+          }
+      },
+      "font": {
+          "family": "-apple-system,\n         BlinkMacSystemFont, \n         \"Segoe UI\", \n         Roboto, \n         Oxygen, \n         Ubuntu, \n         Cantarell, \n         \"Fira Sans\", \n         \"Droid Sans\",  \n         \"Helvetica Neue\", \n         Arial, sans-serif,  \n         \"Apple Color Emoji\", \n         \"Segoe UI Emoji\", \n         \"Segoe UI Symbol\""
+      },
+
+  },
+  "button": {
+      "extend": [
+          { "background": "#151B54", color: "white" }
+      ]
+  }
+}
+
 var sectionStyle = {
   // width: "inherit",
   height: "97vh",

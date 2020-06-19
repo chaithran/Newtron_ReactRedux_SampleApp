@@ -56,17 +56,17 @@ class ModalBox extends React.Component {
     
     render() {
         return (
-            <Box>
-            <div background="white" style={{display: + this.state.isOpen ? '' : 'none'}} ref={el => this.element = el}>
+            <>
+            <div style={{display: + this.state.isOpen ? '' : 'none'}} ref={el => this.element = el}>
               
-                <div className="modal" ><div style={{'text-align':'right'}}> <Button icon={<Close />} onClick={ModalBox.close(this.props.id)} /></div>
+                <div className="modal" ><div style={{'text-align':'right' , "backgroundColor":"#3e6e9e"}}> <Button icon={<Close />} onClick={ModalBox.close(this.props.id)} /></div>
                     <div className="modal-body">
                         {this.props.children}
                     </div>
                 </div>
                 <div className="modal-background"></div>
             </div>
-            </Box>
+            </>
         );
     }
 }
