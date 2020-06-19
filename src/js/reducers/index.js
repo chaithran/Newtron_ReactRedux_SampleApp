@@ -7,7 +7,7 @@ import {
 const initialState = {
   suppliers: [],
   companies:[],
-  isLoggedIn: true,
+  isLoggedIn: false,
   currentUser: 'chai',
   setMainPage: HOME_MAINPAGE,
   selectedSupplier:1
