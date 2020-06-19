@@ -59,6 +59,9 @@ export class App extends Component {
   constructor(props) {
     super(props);
   }
+  componentWillMount(){
+    document.body.style.backgroundColor = "black";
+  }
   handlerIsLoggedIn = () => {
     { this.props.toggleIsLoggedIn() };
   }
